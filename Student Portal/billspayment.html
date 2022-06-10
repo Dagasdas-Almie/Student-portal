@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://gmpg.org/xfn/11">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bills & Payments</title>
+    <link rel="shortcut icon" href="css/favicon.icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
+    <link href="font-awesome/fontawesome.min.css" rel="stylesheet">
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="css/plugins/timeline/timeline.css" rel="stylesheet">
+    <link href="css/Aristo/Aristo.css" rel="stylesheet">
+    <link href="css/tables.css" rel="stylesheet">
+    <link href="css/ui-selene/jquery-ui-1.8.17.custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sb-admin.css" type="text/css" media="screen">
+    <link href="css/custom_style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0" id="header">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.php">
+                    <img style="width: 32px; height: 32px;" src="images/logo.png"> MySchool @ Surigao del Sur State
+                    University - Tagbina </a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" style="color:#FFFFFF;" data-toggle="dropdown" href="#">Almie Anthonny A. Dagasdas
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="main.html"><i class="fa fa-user fa-fw"></i>User Profile</a></li>
+                        <li><a href="changepassword.html"><i class="fa fa-lock fa-fw"></i>Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="divider"></li>
+                <li class="divider"></li>
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-static-side" role="navigation" id="navigation">
+            <div style="position: sticky;top:0;">
+                <ul class="nav" id="side-menu">
+                    <li style="height: 10px;"></li>
+                    <li role="presentation" class="">
+                        <a href="classchedules.html"><i class="fa fa-clock-o fa-fw"></i> My Class Schedules </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="billspayment.html"><i class="fa fa-money fa-fw"></i> My Bills &amp; Payments </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="courseprospecctus.html"><i class="fa fa-edit fa-fw"></i> My Course Prospectus </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="transcriptrecords.html"><i class="fa fa-table fa-fw"></i> My Transcript of Records </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="electronicclearance.html"><i class="fa fa-tasks fa-fw"></i> My Electronic Clearance
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="subjectofferings.html"><i class="fa fa-files-o fa-fw"></i> My Subject Offerings </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="enrollment.html"><i class="fa fa-clipboard fa-fw"></i> My Subject Enrollment </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="evaluationlists.html"><i class="fa fa-thumbs-up fa-fw"></i> My Evaluation Lists </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="page-header"><i class="fa fa-money fa-fw"></i>My Bills &amp; Payments</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default box">
+                        <div class="panel-heading"><i class="fa fa-credit-card"></i> Payment History</div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="reference table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Payment Date</th>
+                                            <th style="text-align:center"> O.R. No.</th>
+                                            <th style="text-align:center">Amount</th>
+                                            <th style="text-align:center">Received by</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><i class="fa fa-money fa-fw"></i> Billing History</div>
+                        <div class="panel-body">
+                            <div id="morris-area-chart">
+                                <div class="panel-body">
+                                    <ul class="timeline">
+                                        <li class="">
+                                            <div class="timeline-badge danger"><i><small>2021</small></i></div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title"><span id="semester_2021">2nd
+                                                            semester</span><small><i><br>Date Assessed: Mar 08,
+                                                                2022</i></small></h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p> </p>
+                                                    <table
+                                                        class=" reference table table-striped table-bordered table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Account No:</td>
+                                                                <td style="text-align: right"><b>20512</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Amount:</td>
+                                                                <td align ="right"> 7,160.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Paid:</td>
+                                                                <td align="right">0.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Balance:</td>
+                                                                <td align="right">7,160.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Remarks:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <dd><button class="btn btn-danger btn-sm" id="year_2021"
+                                                            data-toggle="modal" data-target="#myModal">View Payment
+                                                            Details</button></dd>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge danger"><i><small>2021</small></i></div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title"><span id="semester_2021">1st
+                                                            semester</span><small><i><br>Date Assessed: Sep 20,
+                                                                2021</i></small></h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p> </p>
+                                                    <table
+                                                        class=" reference table table-striped table-bordered table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Account No:</td>
+                                                                <td style="text-align: right"><b>16682</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Amount:</td>
+                                                                <td align="right"> 6,610.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Paid:</td>
+                                                                <td align="right">0.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Balance:</td>
+                                                                <td align="right">6,160.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Remarks:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <dd><button class="btn btn-danger btn-sm" id="year_2021"
+                                                            data-toggle="modal" data-target="#myModal">View Payment
+                                                            Details</button></dd>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="timeline-badge danger"><i><small>2020</small></i></div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title"><span id="semester_2020">2nd
+                                                            semester</span><small><i><br>Date Assessed: Oct 06
+                                                                2020</i></small></h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p> </p>
+                                                    <table
+                                                        class=" reference table table-striped table-bordered table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Account No:</td>
+                                                                <td style="text-align: right"><b>12114</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Amount:</td>
+                                                                <td align="right"> 6,819.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Paid:</td>
+                                                                <td align="right">0.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Balance:</td>
+                                                                <td align="right">6,8100.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Remarks:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <dd><button class="btn btn-danger btn-sm" id="year_2020"
+                                                            data-toggle="modal" data-target="#myModal">View Payment
+                                                            Details</button></dd>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge danger"><i><small>2020</small></i></div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title"><span id="semester_2020">1st
+                                                            semester</span><small><i><br>Date Assessed: Mar 02,,
+                                                                2020</i></small></h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p> </p>
+                                                    <table
+                                                        class=" reference table table-striped table-bordered table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Account No:</td>
+                                                                <td style="text-align: right"><b>10186</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Amount:</td>
+                                                                <td align="right"> 4,260.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Paid:</td>
+                                                                <td align="right">0.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Balance:</td>
+                                                                <td align="right">4,260.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Remarks:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <dd><button class="btn btn-danger btn-sm" id="year_2020"
+                                                            data-toggle="modal" data-target="#myModal">View Payment
+                                                            Details</button></dd>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="timeline-badge danger"><i><small>2019</small></i></div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title"><span id="semester_2019">1st
+                                                            semester</span><small><i><br>Date Assessed: Sep 13,
+                                                                2019</i></small></h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p> </p>
+                                                    <table
+                                                        class=" reference table table-striped table-bordered table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Account No:</td>
+                                                                <td style="text-align: right"><b>8557</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Amount:</td>
+                                                                <td align="right"> 4,730.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Paid:</td>
+                                                                <td align="right">0.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Balance:</td>
+                                                                <td align="right">4,730.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Remarks:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <dd><button class="btn btn-danger btn-sm" id="year_2019"
+                                                            data-toggle="modal" data-target="#myModal">View Payment
+                                                            Details</button></dd>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">Payment Details</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="reference table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th style="text-align: center">Description</th>
+                                                    <th style="text-align: center">Subject</th>
+                                                    <th style="text-align: center">Amount</th>
+                                                    <th style="text-align: center">Paid</th>
+                                                    <th style="text-align: center">Balance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">Math 2*</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">GE-RPH</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">CS 222*</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">CS 223*</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">PE 4</td>
+                                                    <td style="text-align: right">400.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">400.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">Ecos 1</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tuition without Discount</td>
+                                                    <td style="text-align: left">CS 221*</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                    <td style="text-align: right">0.00</td>
+                                                    <td style="text-align: right">600.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" style="text-align: center">Grand Total</td>
+                                                    <td style="text-align: right">4,000.00 </td>
+                                                    <td style="text-align: right">0.00 </td>
+                                                    <td style="text-align: right">4,000.00 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
